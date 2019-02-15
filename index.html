@@ -1,1 +1,37 @@
-./www/exercise.html
+<!-- ./www/exercise.html -->
+<div id="root"></div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+const rootElement = document.getElementById('root')
+const hello ={
+          msg: 'Hello, React World! '
+          }
+const bye = {
+      msg: "Goodbye, world!"
+            }
+  const message = (props) => {
+    return <h2> {props.msg} </h2>
+  }
+
+  const element = (
+  <div className="container">
+    {message(hello)}
+    {message(bye)}
+    </div>
+  )
+
+      ReactDOM.render(element,rootElement)
+
+
+
+    </script>
